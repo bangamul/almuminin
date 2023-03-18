@@ -28,6 +28,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "bootstrap": "^5.2.3",
     "ionicons": "^6.0.3",
+    "ng2-pdf-viewer": "^9.1.4",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
