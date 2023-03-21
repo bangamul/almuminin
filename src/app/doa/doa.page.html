@@ -7,9 +7,8 @@
 <ion-content>
 
   <div class="list-items">
-    <ul>
-      <li [routerLink]="['/doatarawih']">Do'a Tarawih</li>
-      <li [routerLink]="['/doawitir']">Do'a Witir</li>
+    <ul *ngFor=" let doa_value of doa">
+      <li [routerLink]="['/viewdoa/',doa_value.id_unique]" routerLinkActive="router-link-active">{{ doa_value.nama }}</li>
     </ul>
   </div>
 

@@ -2,22 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-
 import { IonicModule } from '@ionic/angular';
 
-import { KitabPageRoutingModule } from './kitab-routing.module';
+import { ViewdoaPageRoutingModule } from './viewdoa-routing.module';
 
-import { KitabPage } from './kitab.page';
+import { ViewdoaPage } from './viewdoa.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PdfViewerModule,
-    KitabPageRoutingModule
+    ViewdoaPageRoutingModule
   ],
-  declarations: [KitabPage]
+  declarations: [ViewdoaPage]
 })
-export class KitabPageModule {}
+export class ViewdoaPageModule {}

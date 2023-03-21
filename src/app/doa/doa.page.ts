@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-doa',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoaPage implements OnInit {
 
-  constructor() { }
+  id_unique : any;
+  nama : any;
+  pengarang : any;
+  file : any;
+  doa : any[] = [];
 
-  ngOnInit() {
+  constructor(
+    public _apiServices: ApiService,
+    ) {
+    this.getDoa();
   }
 
+  ngOnInit() {
+    this.getDoa();
+  }
+
+  getDoa() {
+    this._apiServices.getDoa().subscribe((res:any)=>{
+      console.log('cek', res);
+      this.doa = res;
+    },(error:any)=>{
+      console.log('error',error);
+    })
+  }
 }

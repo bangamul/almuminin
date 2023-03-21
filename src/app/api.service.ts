@@ -25,4 +25,44 @@ export class ApiService {
     return this.http.get(this.apiURL()+'/perhari.php');
   }
 
+  getRatib(){
+    return this.http.get(this.apiURL()+'/ratib.php');
+  }
+
+  getMaulid(){
+    return this.http.get(this.apiURL()+'/maulid.php');
+  }
+
+  getDoa(){
+    return this.http.get(this.apiURL()+'/doa.php');
+  }
+
+  getKitab(){
+    return this.http.get(this.apiURL()+'/kitab.php');
+  }
+
+  getSholawat(){
+    return this.http.get(this.apiURL()+'/sholawat.php');
+  }
+
+  getKitabdetail(id) {
+    return this.http.get(this.apiURL() + '/getkitab.php?id_unique=' + id);
+  }
+
+  getRatibdetail(id) {
+    return this.http.get(this.apiURL() + '/getratib.php?id_unique=' + id);
+  }
+
+  getDoadetail(id) {
+    return this.http.get(this.apiURL() + '/getdoa.php?id_unique=' + id);
+  }
+
+  getmauliddetail(id) {
+    return this.http.get(this.apiURL() + '/getmaulid.php?id_unique=' + id);
+  }
+
+  getsholawatdetail(id) {
+    return this.http.get(this.apiURL() + '/getsholawt.php?id_unique=' + id);
+  }
+
 }
