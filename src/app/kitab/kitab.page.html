@@ -7,8 +7,8 @@
 <ion-content>
 
   <div class="list-items">
-    <ul>
-      <li [routerLink]="['/risalatuljamiah']">Risalatul Jami'ah</li>
+    <ul *ngFor=" let kitab_value of kitab">
+      <li [routerLink]="['/viewkitab/',kitab_value.id_unique]" routerLinkActive="router-link-active">{{ kitab_value.nama }}</li>
     </ul>
   </div>
 

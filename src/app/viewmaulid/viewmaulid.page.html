@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/maulid']"></ion-icon> {{ maulid.nama }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!-- <div id="outerContainer">
+  <div class="pdf-container">
+    <pdf-viewer
+    [src]="pdfSrc"
+    [rotation]="0"
+    [original-size]="false"
+    [show-all]="true"
+    [fit-to-page]="false"
+    [zoom]="1"
+    [zoom-scale]="'page-width'"
+    [stick-to-page]="false"
+    [render-text]="true"
+    [external-link-target]="'blank'"
+    [autoresize]="true"
+    [show-borders]="false"
+    style="width: 100%; height: 100vh;"
+    ></pdf-viewer>
+  </div>
+</div> -->
+
+<div style="height: 100vh;">
+
+  <iframe src="https://perspektiv.id/musholla/kitabpdf/risalatuljamiah.pdf" width="100%" height="100%"></iframe>
+</div>
+
+</ion-content>

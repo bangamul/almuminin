@@ -7,9 +7,8 @@
 <ion-content>
 
   <div class="list-items">
-    <ul>
-      <li [routerLink]="['/maulidsimtuddurror']">Maulid Simtudduror</li>
-      <li [routerLink]="['/barzanji']">Maulid Barzanji</li>
+    <ul *ngFor=" let maulid_value of maulid">
+      <li [routerLink]="['/viewmaulid/',maulid_value.id_unique]" routerLinkActive="router-link-active">{{ maulid_value.nama }}</li>
     </ul>
   </div>
 

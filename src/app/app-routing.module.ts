@@ -49,6 +49,26 @@ const routes: Routes = [
   {
     path: 'maulid',
     loadChildren: () => import('./maulid/maulid.module').then( m => m.MaulidPageModule)
+  },
+  {
+    path: 'viewratib/:id_unique',
+    loadChildren: () => import('./viewratib/viewratib.module').then( m => m.ViewratibPageModule)
+  },
+  {
+    path: 'viewmaulid/:id_unique',
+    loadChildren: () => import('./viewmaulid/viewmaulid.module').then( m => m.ViewmaulidPageModule)
+  },
+  {
+    path: 'viewsholawat/:id_unique',
+    loadChildren: () => import('./viewsholawat/viewsholawat.module').then( m => m.ViewsholawatPageModule)
+  },
+  {
+    path: 'viewdoa/:id_unique',
+    loadChildren: () => import('./viewdoa/viewdoa.module').then( m => m.ViewdoaPageModule)
+  },
+  {
+    path: 'viewkitab/:id_unique',
+    loadChildren: () => import('./viewkitab/viewkitab.module').then( m => m.ViewkitabPageModule)
   }
 ];
 @NgModule({
