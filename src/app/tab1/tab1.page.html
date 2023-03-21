@@ -9,17 +9,81 @@
 <ion-content class="ion-padding" [fullscreen]="true">
   
   <main>
-    <div>
-      <ion-item [routerLink]="['/ratibhaddad']">
-        <ion-label>Ratib Al Haddad</ion-label>
-      </ion-item>
-      <ion-item [routerLink]="['/maulidsimtuddurror']">
-        <ion-label>Maulid Simtuddurror</ion-label>
-      </ion-item>
-      <ion-item [routerLink]="['/risalatuljamiah']">
-        <ion-label>Risalatul Jami'ah</ion-label>
-      </ion-item>
+    <div class="bg-pray">
+      <div>
+        <p class="title">Dzuhur</p>
+        <p class="timesholat">12.04 WIB</p>
+      </div>
+      <div class="gotosholat">
+        Belum Konek API
+      </div>
     </div>
+
+    <div class="jadwal-imam">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <p class="jadwalimamtarawih">Jadwal Imam & Bilal Tarawih</p>
+            <ion-label>{{ today.tanggalhijriah }}</ion-label>
+            <ion-item lines="full">
+              <ion-label>
+                <p>Imam</p>
+                <h1>Ust. {{ today.imam }}</h1>
+              </ion-label>
+              <ion-label>
+                <p>Bilal</p>
+                <h1>{{ today.bilal }}</h1>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="menu-item">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3" class="ion-text-center" [routerLink]="['/kitab']">
+            <div class="icon-kitab-abu">
+              <img src="assets/kitab.png">
+            </div>
+            <p>Kitab</p>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center" [routerLink]="['/ratib']">
+            <div class="icon-kitab-hijau">
+              <img src="assets/ratib.png">
+            </div>
+            <p>Ratib</p>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center" [routerLink]="['/maulid']">
+            <div class="icon-kitab-abu">
+              <img src="assets/maulid.png">
+            </div>
+            <p>Maulid</p>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center">
+            <div class="icon-kitab-hijau">
+              <img src="assets/sholawat.png">
+            </div>
+            <p>Sholawat</p>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center" [routerLink]="['/jadwaltarawih']">
+            <div class="icon-kitab-abu">
+              <img src="assets/praying.png">
+            </div>
+            <p>Tarawih</p>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center" [routerLink]="['/doa']">
+            <div class="icon-kitab-hijau">
+              <img src="assets/doa.png">
+            </div>
+            <p>Do'a</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+
   </main>
 
 </ion-content>

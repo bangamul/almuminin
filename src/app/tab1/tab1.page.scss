@@ -1,0 +1,70 @@
+.bg-pray {
+	background: url('../../assets/bg-pray.png') no-repeat 100%;
+	padding: 16px;
+	background-size: cover;
+	height: 200px;
+	border-radius: 20px;
+	background-position: bottom;
+	background-position-y: -30px;
+	margin-bottom: 16px;
+}
+
+.bg-pray p.title {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 0px;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.bg-pray p.timesholat {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 0px;
+	font-size: 22px;
+	font-weight: 600;
+}
+.gotosholat {
+	margin-top: 45px;
+	font-size: 18px;
+}
+.menu-item p {
+    font-size: 16px;
+}
+.menu-item {
+	margin-bottom: 16px;
+}
+.icon-kitab-hijau {
+	background: #c0e3cd;
+	padding: 10px;
+	border-radius: 20px;
+	margin: auto;
+	margin-bottom: 8px;
+}
+.icon-kitab-hijau img {
+	width: 100%;
+}
+.icon-kitab-abu {
+	background: #d7d7d7;
+	padding: 10px;
+	border-radius: 20px;
+	margin: auto;
+	margin-bottom: 8px;
+}
+.icon-kitab-abu img {
+	width: 100%;
+}
+p {
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 16px;
+}
+.jadwal-imam {
+	margin-bottom: 16px;
+}
+p.jadwalimamtarawih {
+	font-size: 18px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
