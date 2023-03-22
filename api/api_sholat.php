@@ -9,11 +9,15 @@ header('Content-Type: application/json; charset=utf-8');
 date_default_timezone_set('Asia/Jakarta');
 
 // set tanggal
-$tanggal_sekarang = date('Y-m-d');
-$url = "https://api.banghasan.com/sholat/format/json/jadwal/kota/667/tanggal/$tanggal_sekarang";
+$tanggal_sekarang = date('d');
+$bulan_sekarang = date('m');
+$tahun_sekarang = date('Y');
+$url = "https://api.myquran.com/v1/sholat/jadwal/1301/$tahun_sekarang/$bulan_sekarang/$tanggal_sekarang";
 $konten = file_get_contents($url);
 
-var_dump($konten);
+echo $konten;
+
+// var_dump($konten);
 
 //call api
 // $json = file_get_contents($url);
@@ -27,5 +31,8 @@ var_dump($konten);
 // $subuh = $json->results[0]->jadwal->data->subuh;
 // $tanggal = $json->results[0]->jadwal->data->tanggal;
 // $terbit = $json->results[0]->jadwal->data->terbit;
+// echo "ashar: " . $ashar . ", dhuha: " . $dhuha . ", dzuhur: " . $dzuhur . ", imsak: " . $imsak ", maghrib: " . $maghrib . ", isya: " . $isya . ", subuh: " . $subuh . ", tanggal: " . $tanggal . ", terbit: " . $terbit;
 
+// output
+// Latitude: 40.6781784, Longitude: -73.9441579
 ?>
