@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab1',
@@ -13,19 +14,27 @@ export class Tab1Page {
   jadwal : any;
   tanggalhijriah : any;
   today : any = {};
-  // tarawih : any[] = [];
-  // let today : any = {};
-  // today = {"id":"1","imam":"Ahmad Fauji","bilal":"Dana","jadwal":"2023-03-22","tanggalhijriah":"1 Ramadhan 1444 H"}
+  dzuhur : any;
+  ashar : any;
+  maghrib: any;
+  isya: any;
+  subuh: any;
+  imsak: any;
+  terbit: any;
+  tanggal: any;
+  waktusholat : any = {};
 
 
   constructor(
     public _apiServices: ApiService,
+    public http: HttpClient,
     ) {
     this.getPerhari();
+    this.readDataFromAPI();
   }
 
   ionViewDidEnter(){
-    this.getPerhari();
+    this.readDataFromAPI();
   }
 
   ngOnInit() {
@@ -47,6 +56,17 @@ export class Tab1Page {
       this.today = JSON.parse(JSON.stringify(res));
     },(error:any)=>{
       console.log('error',error);
+    })
+  }
+
+  readDataFromAPI() {
+    this.http.get('https://perspektiv.id/musholla/api/api_sholat.php').subscribe((data) => {
+      console.log(data);
+      var isijadwal = JSON.parse(JSON.stringify(data));
+      this.waktusholat = isijadwal.data.jadwal;
+      console.log('cek this', this.waktusholat);
+    }, (err) => {
+      console.log(err);
     })
   }
 
