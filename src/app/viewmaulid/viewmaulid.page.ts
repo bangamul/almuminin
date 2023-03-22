@@ -17,8 +17,8 @@ export class ViewmaulidPage implements OnInit {
   file : any;
   maulid : any = {};
 
-  // pdfSrc = "assets/kitabpdf/ratibalhaddad.pdf";
-  pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  
+  pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
 
   constructor(
     public pdfViewerComponent: PdfViewerComponent,
