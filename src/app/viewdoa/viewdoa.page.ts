@@ -16,9 +16,12 @@ export class ViewdoaPage implements OnInit {
   pengarang : any;
   file : any;
   doa : any = {};
-
-  // pdfSrc = "assets/kitabpdf/ratibalhaddad.pdf";
-  pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  filenya: any= {};
+  
+  // pdfSrc = "../assets/kitabpdf/ratibalhaddad.pdf";
+  // pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
+  pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + 'ratibalhaddad' + '.pdf';
+  // pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
 
   constructor(
     public pdfViewerComponent: PdfViewerComponent,
@@ -29,7 +32,7 @@ export class ViewdoaPage implements OnInit {
     // this.getKitab();
     this.route.params.subscribe((param:any) => {
       this.id_unique = param.id_unique;
-      console.log(this.id_unique);
+      console.log(this.file);
       this.getDoadetail(this.id_unique);
     })
   }
@@ -42,6 +45,8 @@ export class ViewdoaPage implements OnInit {
     this._apiServices.getDoadetail(id_unique).subscribe((res: any) => {
       console.log('okey', res);
       this.doa = JSON.parse(JSON.stringify(res));
+      console.log('cek doa', this.doa);
+      // this.filenya = this.doa[file];
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');
