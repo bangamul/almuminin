@@ -9,13 +9,19 @@
 <ion-content class="ion-padding" [fullscreen]="true">
   
   <main>
+    <p style="font-size: 14px;">Jakarta, {{ waktusholat.tanggal }}</p>
     <div class="bg-pray">
-      <div>
-        <p class="title">Dzuhur</p>
-        <p class="timesholat">12.04 WIB</p>
-      </div>
+      <!-- <div>
+        <p class="title">Imsak</p>
+        <p class="timesholat">{{ waktusholat.imsak }} WIB</p>
+      </div> -->
       <div class="gotosholat">
-        Belum Konek API
+        Imsak : {{ waktusholat.imsak }} <br>
+        Subuh : {{ waktusholat.subuh }} <br>
+        Dzuhur : {{ waktusholat.dzuhur }} <br>
+        Ashar : {{ waktusholat.ashar }} <br>
+        Maghrib : {{ waktusholat.maghrib }} <br>
+        Isya : {{ waktusholat.isya }} <br>
       </div>
     </div>
 
