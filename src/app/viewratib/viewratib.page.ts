@@ -16,9 +16,10 @@ export class ViewratibPage implements OnInit {
   pengarang : any;
   file : any;
   ratib : any = {};
+  pdfSrc: any = {};
 
   
-  pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
+  // pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
 
   constructor(
     public pdfViewerComponent: PdfViewerComponent,
@@ -41,6 +42,8 @@ export class ViewratibPage implements OnInit {
     this._apiServices.getRatibdetail(id_unique).subscribe((res: any) => {
       console.log('okey', res);
       this.ratib = JSON.parse(JSON.stringify(res));
+      var filesnyacoba = this.ratib.file;
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');

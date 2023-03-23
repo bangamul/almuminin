@@ -69,6 +69,10 @@ const routes: Routes = [
   {
     path: 'viewkitab/:id_unique',
     loadChildren: () => import('./viewkitab/viewkitab.module').then( m => m.ViewkitabPageModule)
+  },
+  {
+    path: 'sholawat',
+    loadChildren: () => import('./sholawat/sholawat.module').then( m => m.SholawatPageModule)
   }
 ];
 @NgModule({
