@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab1']"></ion-icon> Kumpulan Sholawat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="list-items">
+    <ul *ngFor=" let sholawat_value of sholawat">
+      <li [routerLink]="['/viewsholawat/',sholawat_value.id_unique]" routerLinkActive="router-link-active">{{ sholawat_value.nama }}</li>
+    </ul>
+  </div>
+
+</ion-content>

@@ -33,8 +33,9 @@ export class ViewkitabPage implements OnInit {
   pengarang : any;
   file : any;
   kitab : any = {};
+  pdfSrc: any = {};
 
-  pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
+  // pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
 
 
   constructor(
@@ -59,6 +60,8 @@ export class ViewkitabPage implements OnInit {
     this._apiServices.getKitabdetail(id_unique).subscribe((res: any) => {
       console.log('okey', res);
       this.kitab = JSON.parse(JSON.stringify(res));
+      var filesnyacoba = this.kitab.file;
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');

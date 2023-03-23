@@ -16,9 +16,10 @@ export class ViewmaulidPage implements OnInit {
   pengarang : any;
   file : any;
   maulid : any = {};
+  pdfSrc: any = {};
 
   
-  pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
+  // pdfSrc = "https://perspektiv.id/musholla/kitabpdf/ratibalhaddad.pdf";
 
   constructor(
     public pdfViewerComponent: PdfViewerComponent,
@@ -41,6 +42,8 @@ export class ViewmaulidPage implements OnInit {
     this._apiServices.getmauliddetail(id_unique).subscribe((res: any) => {
       console.log('okey', res);
       this.maulid = JSON.parse(JSON.stringify(res));
+      var filesnyacoba = this.maulid.file;
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');
