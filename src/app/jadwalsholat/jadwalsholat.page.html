@@ -1,0 +1,62 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab1']"></ion-icon> Jadwal Sholat</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+<main>
+  <div class="titleheader" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="chevron-back-outline"></ion-icon> Jadwal Sholat
+  </div>
+
+  <div class="keterangansholat">
+    <div class="lokasi">
+      <p>Jakarta</p>
+      {{ waktusholat.tanggal }}
+    </div>
+  </div>
+
+  <div class="listjadwal">
+    <ion-list [inset]="true">
+      <ion-item style="margin-top: 5px;">
+        <ion-label>Imsak :</ion-label>
+        <ion-label slot="end">{{ waktusholat.imsak }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dzuhur : </ion-label>
+        <ion-label slot="end">{{ waktusholat.dzuhur }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ashar :</ion-label>
+        <ion-label slot="end">{{ waktusholat.ashar }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Subuh :</ion-label>
+        <ion-label slot="end">{{ waktusholat.subuh }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Maghrib :</ion-label>
+        <ion-label slot="end">{{ waktusholat.maghrib }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Isya :</ion-label>
+        <ion-label slot="end">{{ waktusholat.isya }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Terbit :</ion-label>
+        <ion-label slot="end">{{ waktusholat.terbit }}</ion-label>
+        <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</main>
+
+</ion-content>

@@ -21,6 +21,10 @@ export class ApiService {
     return this.http.get(this.apiURL()+'/tampil.php');
   }
 
+  getGallery(){
+    return this.http.get(this.apiURL()+'/getgallery.php');
+  }
+
   getPerhari(){
     return this.http.get(this.apiURL()+'/perhari.php');
   }
@@ -67,6 +71,18 @@ export class ApiService {
 
   getJadwalsholat(){
     return this.http.get(this.apiURL()+'/api_sholat.php');
+  }
+
+  getListquran(){
+    return this.http.get(this.apiURL()+'/api_quran.php');
+  }
+
+  apiquranURL(){
+    return "https://equran.id/api/v2/surat";
+  }
+
+  getListsurat(id){
+    return this.http.get(this.apiquranURL()+'/' + id);
   }
 
 }

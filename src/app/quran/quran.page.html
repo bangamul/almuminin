@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab1']"></ion-icon> Al Qur'an</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="list-items">
+    <ul *ngFor=" let namasurat_value of namasurat">
+      <li [routerLink]="['/qurandetail/',namasurat_value.nomor]" routerLinkActive="router-link-active">{{ namasurat_value.nomor }} {{ namasurat_value.namaLatin }}</li>
+    </ul>
+  </div>
+ -->
+  <div class="daftarsuratquran">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Qur'an per Surat</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor=" let namasurat_value of namasurat" [routerLink]="['/qurandetail/',namasurat_value.nomor]" routerLinkActive="router-link-active">
+        <div style="width: 40px;">{{ namasurat_value.nomor }}</div>
+        <ion-label>
+          <h1>{{ namasurat_value.namaLatin }}</h1>
+          <p>{{ namasurat_value.jumlahAyat }} Ayat</p>
+        </ion-label>
+        <ion-label slot="end" style="font-size: 28px;">{{ namasurat_value.nama }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div>
+    Jumlah Ayat Qur'an = 114
+    <br><br><br> 
+  </div>
+
+</ion-content>

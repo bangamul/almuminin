@@ -1,0 +1,73 @@
+ion-icon {
+    font-size: 22px;
+    vertical-align: text-top;
+}
+
+.list-items ul {
+    padding-inline-start: 0px;
+}
+.list-items ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #212121;
+    border-radius: 8px;
+    text-align: center;
+}
+.list-items {
+    margin: auto;
+    padding: 16px;
+}
+
+main {
+    background: url('../../assets/bgjadwalsholat.jpg') no-repeat 100%;
+    padding: 16px;
+    background-size: cover;
+    height: 100vh;
+}
+
+.titleheader {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.listjadwal ion-item {
+    font-size: 20px;
+    height: 80px;
+}
+
+.listjadwal ion-icon {
+    font-size: 30px;
+}
+
+/*.listjadwal {
+    position: absolute;
+    width: 100%;
+    padding: 0px;
+    left: 0;
+    bottom: 0;
+}*/
+
+.listjadwal ion-list {
+    border-radius: 18px;
+    margin: 0px;
+}
+
+.keterangansholat {
+    margin: 16px 0px;
+    text-align: center;
+}
+
+.lokasi p {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.lokasi {
+    color: #fff;
+    font-size: 18px;
+}
