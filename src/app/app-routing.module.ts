@@ -73,6 +73,22 @@ const routes: Routes = [
   {
     path: 'sholawat',
     loadChildren: () => import('./sholawat/sholawat.module').then( m => m.SholawatPageModule)
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
+    path: 'jadwalsholat',
+    loadChildren: () => import('./jadwalsholat/jadwalsholat.module').then( m => m.JadwalsholatPageModule)
+  },
+  {
+    path: 'quran',
+    loadChildren: () => import('./quran/quran.module').then( m => m.QuranPageModule)
+  },
+  {
+    path: 'qurandetail/:nomor',
+    loadChildren: () => import('./qurandetail/qurandetail.module').then( m => m.QurandetailPageModule)
   }
 ];
 @NgModule({
