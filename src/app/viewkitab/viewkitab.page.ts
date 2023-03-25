@@ -61,7 +61,7 @@ export class ViewkitabPage implements OnInit {
       console.log('okey', res);
       this.kitab = JSON.parse(JSON.stringify(res));
       var filesnyacoba = this.kitab.file;
-      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba;
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');

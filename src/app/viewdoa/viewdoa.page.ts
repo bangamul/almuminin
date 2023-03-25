@@ -44,7 +44,7 @@ export class ViewdoaPage implements OnInit {
       console.log('okey', res);
       this.doa = JSON.parse(JSON.stringify(res));
       var filesnyacoba = this.doa.file;
-      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba;
       console.log('cek doa baru', this.pdfSrc);
     }, (error: any) => {
       console.log('error', error);

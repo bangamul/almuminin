@@ -41,7 +41,7 @@ export class ViewsholawatPage implements OnInit {
       console.log('okey', res);
       this.sholawat = JSON.parse(JSON.stringify(res));
       var filesnyacoba = this.sholawat.file;
-      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba;
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');
