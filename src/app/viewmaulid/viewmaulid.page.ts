@@ -43,7 +43,7 @@ export class ViewmaulidPage implements OnInit {
       console.log('okey', res);
       this.maulid = JSON.parse(JSON.stringify(res));
       var filesnyacoba = this.maulid.file;
-      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba + '.pdf';
+      this.pdfSrc = 'https://perspektiv.id/musholla/kitabpdf/' + filesnyacoba;
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data');
