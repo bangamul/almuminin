@@ -4,11 +4,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fullheight ion-padding">
 
-  <div>
-    <p>{{ isisurat.nomorAyat }}</p>
-    <p>{{ isisurat.teksArab }}</p>
+  <div *ngFor=" let konten_value of konten">
+    <p class="textarab">{{ konten_value.teksArab }}</p>
+    <p class="mb-0 colorgreen">{{ konten_value.nomorAyat }} . {{ konten_value.teksLatin }}</p>
+    <p>{{ konten_value.teksIndonesia }}</p>
   </div>
+
+  <p class="endofitem">end of list...</p>
+
+  <!-- <div>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Video Games</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor=" let konten_value of konten">
+        <ion-label>
+          <p class="textarab">{{ konten_value.teksArab }}</p>
+          <p>{{ konten_value.nomorAyat }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div> -->
 
 </ion-content>

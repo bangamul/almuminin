@@ -17,7 +17,7 @@ export class QuranPage implements OnInit {
   nomor: any;
   deskripsi: any;
   audioFull: any;
-  namasurat : any = {};
+  namasurat : any[] = [];
 
   constructor(
     public _apiServices: ApiService,
