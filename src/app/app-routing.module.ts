@@ -75,7 +75,7 @@ const routes: Routes = [
     loadChildren: () => import('./sholawat/sholawat.module').then( m => m.SholawatPageModule)
   },
   {
-    path: 'gallery',
+    path: 'gallery/:id_unique',
     loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
   },
   {

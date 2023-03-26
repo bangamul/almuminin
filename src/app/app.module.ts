@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 
 import { PdfViewerModule, PdfViewerComponent } from 'ng2-pdf-viewer';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), HttpClientModule, AppRoutingModule, PdfViewerModule],

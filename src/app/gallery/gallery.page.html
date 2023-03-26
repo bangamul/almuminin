@@ -1,9 +1,18 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>gallery</ion-title>
+    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab2']"></ion-icon> Kembali</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <div style="position: absolute;font-size: 22px;" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="chevron-back-outline"></ion-icon> Kembali
+  </div>
+
+  <div class="vertical-center">
+    <img [src]="linkImage">
+    <a href=""></a>
+  </div>
 
 </ion-content>
