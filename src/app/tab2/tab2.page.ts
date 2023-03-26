@@ -11,7 +11,8 @@ export class Tab2Page {
 
   id_unique: any;
   nama: any;
-  gambarnya : any = {};
+  // gambarnya : any = {};
+  gambarnya : any[] = [];
 
   constructor(
     public _apiServices: ApiService,

@@ -69,6 +69,10 @@ export class ApiService {
     return this.http.get(this.apiURL() + '/getsholawat.php?id_unique=' + id);
   }
 
+  getgallerydetail(id) {
+    return this.http.get(this.apiURL() + '/getgallerydetail.php?id_unique=' + id);
+  }
+
   getJadwalsholat(){
     return this.http.get(this.apiURL()+'/api_sholat.php');
   }

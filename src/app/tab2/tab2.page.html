@@ -12,17 +12,13 @@
     <div>
       <ion-grid>
         <ion-row>
-          <ion-col size="3" *ngFor=" let isi of gambarnya">
-            <figure>
+          <ion-col size="4" *ngFor=" let isi of gambarnya">
+            <figure [routerLink]="['/gallery/',isi.id_unique]" routerLinkActive="router-link-active">
               <img src="https://perspektiv.id/musholla/gallery/{{ isi.nama }}">
             </figure>
           </ion-col>
         </ion-row>
       </ion-grid>
-    </div>
-
-    <div style="text-align: center">
-      <h1>Belom Jadi</h1>
     </div>
   </main>
 
