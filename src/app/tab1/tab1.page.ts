@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
+import { Platform } from '@ionic/angular';
+import { App } from '@capacitor/app';
 
 @Component({
   selector: 'app-tab1',
@@ -28,9 +30,14 @@ export class Tab1Page {
   constructor(
     public _apiServices: ApiService,
     public http: HttpClient,
+    private platform: Platform
     ) {
     this.getPerhari();
     this.readDataFromAPI();
+
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      App.exitApp();
+    });
   }
 
   ionViewDidEnter(){
