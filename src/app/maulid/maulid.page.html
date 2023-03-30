@@ -2,12 +2,15 @@
   <ion-toolbar>
     <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab1']"></ion-icon> Kumpulan Maulid</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="term" show-cancel-button="focus" placeholder="Cari ..."></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <div class="list-items">
-    <ul *ngFor=" let maulid_value of maulid">
+    <ul *ngFor=" let maulid_value of maulid |filter:term">
       <li [routerLink]="['/viewmaulid/',maulid_value.id_unique]" routerLinkActive="router-link-active">{{ maulid_value.nama }}</li>
     </ul>
   </div>

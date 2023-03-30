@@ -14,6 +14,8 @@ export class MaulidPage implements OnInit {
   file : any;
   maulid : any[] = [];
 
+  term;
+
   constructor(
     public _apiServices: ApiService,
     ) {

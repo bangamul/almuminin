@@ -14,6 +14,8 @@ export class SholawatPage implements OnInit {
   file : any;
   sholawat : any[] = [];
 
+  term;
+
   constructor(
     public _apiServices: ApiService,
     ) {
@@ -28,6 +30,7 @@ export class SholawatPage implements OnInit {
     this._apiServices.getSholawat().subscribe((res:any)=>{
       console.log('cek', res);
       this.sholawat = res;
+      // console.log('coba ini dah:', this.sholawat);
     },(error:any)=>{
       console.log('error',error);
     })

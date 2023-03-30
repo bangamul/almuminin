@@ -14,6 +14,8 @@ export class KitabPage implements OnInit {
   file : any;
   kitab : any[] = [];
 
+  term;
+
   constructor(
     public _apiServices: ApiService,
     ) {

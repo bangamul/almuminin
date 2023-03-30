@@ -14,6 +14,8 @@ export class DoaPage implements OnInit {
   file : any;
   doa : any[] = [];
 
+  term;
+
   constructor(
     public _apiServices: ApiService,
     ) {

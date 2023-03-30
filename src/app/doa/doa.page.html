@@ -2,12 +2,15 @@
   <ion-toolbar>
     <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab1']"></ion-icon> Kumpulan Do'a</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="term" show-cancel-button="focus" placeholder="Cari ..."></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <div class="list-items">
-    <ul *ngFor=" let doa_value of doa">
+    <ul *ngFor=" let doa_value of doa |filter:term">
       <li [routerLink]="['/viewdoa/',doa_value.id_unique]" routerLinkActive="router-link-active">{{ doa_value.nama }}</li>
     </ul>
   </div>

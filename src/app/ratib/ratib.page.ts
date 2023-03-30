@@ -14,6 +14,8 @@ export class RatibPage implements OnInit {
   file : any;
   ratib : any[] = [];
 
+  term;
+
   constructor(
     public _apiServices: ApiService,
     ) {
