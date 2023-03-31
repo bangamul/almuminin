@@ -6,10 +6,10 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content class="ion-padding" [fullscreen]="true">
+<ion-content [fullscreen]="true">
   
   <main>
-    <h1 class="almuminin">Musholla Al Mu'minin</h1>
+    <!-- <h1 class="almuminin">Musholla Al Mu'minin</h1>
     <p style="font-size: 14px;">Jakarta, {{ waktusholat.tanggal }}</p>
     <div class="bg-pray" [routerLink]="['/jadwalsholat']">
       <div>
@@ -17,23 +17,55 @@
         <p class="desctime">{{ waktusholat.maghrib }} WIB</p>
       </div>
       <div class="gotosholat">
-        <!-- Imsak : {{ waktusholat.imsak }} <br> -->
         Imsak : {{ waktusholat.imsak }} WIB<br>
-        <!-- Dzuhur : {{ waktusholat.dzuhur }} WIB<br> -->
-        <!-- Ashar : {{ waktusholat.ashar }} WIB<br> -->
         Subuh : {{ waktusholat.subuh }} WIB<br>
-        <!-- Maghrib : {{ waktusholat.maghrib }} WIB <br> -->
-        <!-- Isya : {{ waktusholat.isya }} WIB <br> -->
-        <!-- Ishrok : {{ waktusholat.terbit }} WIB -->
+      </div>
+    </div> -->
+
+    <div class="new-style-top">
+      <h1 class="almuminin">Musholla Al Mu'minin</h1>
+      <p class="lokasi">Jakarta, {{ waktusholat.tanggal }}</p>
+      <div class="bg-pray" [routerLink]="['/jadwalsholat']">
+        <!-- <div>
+          <p class="title">Maghrib :</p>
+          <p class="desctime">{{ waktusholat.maghrib }} WIB</p>
+        </div>
+        <div class="gotosholat">
+          Imsak : {{ waktusholat.imsak }} WIB<br>
+          Subuh : {{ waktusholat.subuh }} WIB<br>
+        </div> -->
+        <p class="waktusholatjakarta">waktu sholat wilayah jakarta</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <div>Imsak<br> {{ waktusholat.imsak }}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div>Subuh<br> {{ waktusholat.subuh }}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div>Dzuhur<br> {{ waktusholat.dzuhur }}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div>Ashar<br> {{ waktusholat.ashar }}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div>Maghrib<br> {{ waktusholat.maghrib }}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div>'Isya<br> {{ waktusholat.isya }}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
     </div>
 
-    <div class="jadwal-imam">
+    <div class="jadwal-imam ion-padding">
       <ion-grid>
         <ion-row>
           <ion-col size="12">
             <p class="jadwalimamtarawih">Jadwal Imam & Bilal Tarawih</p>
-            <ion-label>{{ today.tanggalhijriah }}</ion-label>
+            <ion-label>{{ waktusholat.tanggal }} - {{ today.tanggalhijriah }}</ion-label>
             <ion-item lines="full">
               <ion-label>
                 <p>Imam</p>
@@ -49,7 +81,7 @@
       </ion-grid>
     </div>
 
-    <div class="menu-item">
+    <div class="menu-item ion-padding">
       <ion-grid>
         <ion-row>
           <ion-col size="3" class="ion-text-center" [routerLink]="['/quran']">

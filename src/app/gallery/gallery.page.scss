@@ -3,9 +3,20 @@ ion-icon {
     vertical-align: text-top;
 }
 
-.vertical-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.vertical-center {
+    margin-top: 12px;
+}
+
+p {
+    margin-top: 10px;
+    color: #000000;
+}
+
+span {
+    margin-left: 10px;
+    color: #212121;
+}
+
+.ion-paddings {
+    padding: 0px 16px;
 }

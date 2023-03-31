@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.tab-selected{
+  color: #2dd36f !important;
+}
+
+input.searchbar-input.sc-ion-searchbar-md {
+    border-radius: 30px;
+    border: 0px !important;
+    box-shadow: unset;
+}
