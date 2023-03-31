@@ -1,18 +1,45 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title><ion-icon name="chevron-back-outline" [routerLink]="['/tabs/tab2']"></ion-icon> Kembali</ion-title>
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title [routerLink]="['/tabs/tab2']"><ion-icon name="chevron-back-outline"></ion-icon> Kembali</ion-title>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
-<ion-content class="ion-padding">
+<ion-content>
 
-  <div style="position: absolute;font-size: 22px;" [routerLink]="['/tabs/tab2']">
+  <!-- <div style="position: absolute;font-size: 22px;" [routerLink]="['/tabs/tab2']">
     <ion-icon name="chevron-back-outline"></ion-icon> Kembali
-  </div>
+  </div> -->
 
   <div class="vertical-center">
     <img [src]="linkImage">
+    <div class="ion-paddings"><p><strong>Info :</strong> <span>{{ infohnya }}</span></p></div>
     <a href=""></a>
+  </div>
+
+  <!-- <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <figure>
+            <img [src]="linkImage">
+            <p><strong>Info :</strong> <span>{{ infohnya }}</span></p>
+          </figure>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
+
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" *ngFor=" let isi of gambarnyakecuali">
+          <figure [routerLink]="['/gallery/',isi.id_unique]" routerLinkActive="router-link-active">
+            <img src="https://perspektiv.id/musholla/gallery/{{ isi.nama }}">
+            <p><strong>Info :</strong> <span>{{ isi.info }}</span></p>
+          </figure>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
 </ion-content>
