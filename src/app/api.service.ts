@@ -93,4 +93,8 @@ export class ApiService {
     return this.http.get(this.apiquranURL()+'/' + id);
   }
 
+  getYoutube(){
+    return this.http.get(this.apiURL()+'/getyoutube.php');
+  }
+
 }
